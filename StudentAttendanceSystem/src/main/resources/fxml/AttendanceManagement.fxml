@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      alignment="CENTER" spacing="15" styleClass="root fade-in" fx:controller="com.sams.controller.AttendanceManagementController"
+      stylesheets="@../css/style.css">
+    <Label text="Attendance Management" style="-fx-font-size: 20px; -fx-text-fill: #4a90e2;"/>
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Class Session:" styleClass="label"/>
+        <ComboBox fx:id="classComboBox" styleClass="combo-box"/>
+    </HBox>
+    <TableView fx:id="attendanceTable" styleClass="table-view">
+        <columns>
+            <TableColumn fx:id="studentIdColumn" text="Student ID"/>
+            <TableColumn fx:id="studentNameColumn" text="Student Name"/>
+            <TableColumn fx:id="statusColumn" text="Status"/>
+        </columns>
+    </TableView>
+    <HBox spacing="15" alignment="CENTER">
+        <Button text="Mark Present" onAction="#markPresent" styleClass="button"/>
+        <Button text="Mark Absent" onAction="#markAbsent" styleClass="button"/>
+        <Button text="Save Attendance" onAction="#saveAttendance" styleClass="button"/>
+    </HBox>
+</VBox>

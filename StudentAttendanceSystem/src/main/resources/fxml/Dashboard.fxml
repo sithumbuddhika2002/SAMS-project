@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      alignment="CENTER" spacing="20" styleClass="root fade-in" fx:controller="com.sams.controller.DashboardController">
+    <Label fx:id="welcomeLabel" style="-fx-font-size: 20px; -fx-text-fill: #4a90e2;"/>
+    <Button text="Manage Courses" onAction="#navigateToCourseManagement" fx:id="courseButton" styleClass="button"/>
+    <Button text="Manage Students" onAction="#navigateToStudentManagement" fx:id="studentButton" styleClass="button"/>
+    <Button text="Manage Lecturers" onAction="#navigateToLecturerManagement" fx:id="lecturerButton" styleClass="button"/>
+    <Button text="Manage Classes" onAction="#navigateToClassManagement" fx:id="classButton" styleClass="button"/>
+    <Button text="Manage Attendance" onAction="#navigateToAttendanceManagement" fx:id="attendanceButton" styleClass="button"/>
+    <Button text="View Reports" onAction="#navigateToAttendanceReport" fx:id="reportButton" styleClass="button"/>
+</VBox>

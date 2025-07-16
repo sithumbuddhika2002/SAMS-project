@@ -6,11 +6,9 @@
 <?import javafx.scene.control.Button?>
 
 <VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-      alignment="CENTER" spacing="10" fx:controller="com.sams.controller.LoginController">
-    <Label text="Student Attendance Management System"/>
-    <Label text="Username"/>
-    <TextField fx:id="usernameField"/>
-    <Label text="Password"/>
-    <PasswordField fx:id="passwordField"/>
-    <Button text="Login" onAction="#handleLogin"/>
+      alignment="CENTER" spacing="15" styleClass="root fade-in" fx:controller="com.sams.controller.LoginController">
+    <Label text="Student Attendance System" style="-fx-font-size: 24px; -fx-text-fill: #4a90e2;"/>
+    <TextField fx:id="usernameField" promptText="Username" styleClass="text-field"/>
+    <PasswordField fx:id="passwordField" promptText="Password" styleClass="text-field"/>
+    <Button text="Login" onAction="#handleLogin" styleClass="button"/>
 </VBox>

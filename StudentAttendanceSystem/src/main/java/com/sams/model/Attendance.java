@@ -11,19 +11,19 @@ public class Attendance {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "class_id")
-    private ClassSession classSession;
+    @JoinColumn(name = "student_id", nullable = false)
+    private Student student;
 
     @ManyToOne
-    @JoinColumn(name = "student_id")
-    private Student student;
+    @JoinColumn(name = "class_session_id", nullable = false)
+    private ClassSession classSession;
+
+    @Column(nullable = false)
+    private LocalDate attendanceDate;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Status status;
-
-    @Column(nullable = false)
-    private LocalDate attendanceDate;
 
     public enum Status {
         PRESENT, ABSENT
@@ -32,12 +32,12 @@ public class Attendance {
     // Getters and Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
-    public ClassSession getClassSession() { return classSession; }
-    public void setClassSession(ClassSession classSession) { this.classSession = classSession; }
     public Student getStudent() { return student; }
     public void setStudent(Student student) { this.student = student; }
-    public Status getStatus() { return status; }
-    public void setStatus(Status status) { this.status = status; }
+    public ClassSession getClassSession() { return classSession; }
+    public void setClassSession(ClassSession classSession) { this.classSession = classSession; }
     public LocalDate getAttendanceDate() { return attendanceDate; }
     public void setAttendanceDate(LocalDate attendanceDate) { this.attendanceDate = attendanceDate; }
+    public Status getStatus() { return status; }
+    public void setStatus(Status status) { this.status = status; }
 }

@@ -1,7 +1,7 @@
+
 package com.sams.model;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "lecturers")
@@ -13,10 +13,8 @@ public class Lecturer {
     @Column(nullable = false)
     private String name;
 
+    @Column
     private String contact;
-
-    @OneToMany(mappedBy = "lecturer")
-    private List<Subject> subjects;
 
     // Getters and Setters
     public Long getId() { return id; }

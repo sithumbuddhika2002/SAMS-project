@@ -15,6 +15,7 @@ public class Student {
     @Column(nullable = false)
     private String name;
 
+    @Column
     private String contact;
 
     @ManyToOne
